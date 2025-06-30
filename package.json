@@ -16,7 +16,11 @@
     "test:diagram": "node test/test-diagram-processor.js",
     "test:diagram-integration": "node test/test-diagram-integration.js",
     "test:diagram-comprehensive": "node test/test-diagram-comprehensive.js",
-    "test:all": "npm run test && npm run test:hierarchy && npm run test:mermaid && npm run test:references && npm run test:migration && npm run test:init && npm run test:diagram-comprehensive"
+    "test:google-docs": "node test/test-google-docs.js",
+    "test:gdocs": "node test/gdocs/test-all-gdocs.js",
+    "test:gdocs-converter": "node test/gdocs/test-converter.js",
+    "test:gdocs-sync": "node test/gdocs/test-sync.js",
+    "test:all": "npm run test && npm run test:hierarchy && npm run test:mermaid && npm run test:references && npm run test:migration && npm run test:init && npm run test:diagram-comprehensive && npm run test:google-docs && npm run test:gdocs"
   },
   "dependencies": {
     "axios": "^1.6.0",
@@ -25,9 +29,12 @@
     "dotenv": "^16.3.1",
     "form-data": "^4.0.3",
     "fs-extra": "^11.1.1",
+    "google-auth-library": "^9.15.1",
+    "googleapis": "^128.0.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "mime-types": "^2.1.35",
+    "open": "^8.4.2",
     "ora": "^5.4.1"
   },
   "optionalDependencies": {

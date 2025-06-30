@@ -185,13 +185,22 @@ node test/test-mermaid.js                 # Mermaid specific
 docflu/
 ├── bin/docflu.js              # CLI entry point
 ├── lib/
-│   ├── commands/sync.js        # Sync logic
-│   └── core/                   # Core modules
+│   ├── commands/              # CLI commands
+│   │   ├── sync.js           # Confluence sync
+│   │   ├── sync_gdocs.js     # Google Docs sync
+│   │   └── init.js           # Configuration
+│   └── core/                 # Core modules
 │       ├── confluence-client.js
 │       ├── markdown-parser.js
 │       ├── docusaurus-scanner.js
-│       └── state-manager.js
-└── test/                       # Test files
+│       ├── state-manager.js
+│       └── gdocs/            # Google Docs integration
+│           ├── google-docs-client.js    # API client
+│           ├── google-docs-converter.js  # Markdown conversion
+│           ├── google-docs-state.js     # State management
+│           └── google-docs-sync.js      # Sync orchestration
+└── test/                      # Test files
+    └── gdocs/                # Google Docs tests
 ```
 
 ### Contributing
